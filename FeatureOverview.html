@@ -7,20 +7,22 @@
   <link rel="stylesheet" href="../css/styles.css" />
   <script defer src="../js/main.js"></script>
 </head>
+
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
 <header>
   <div class="container">
     <div class="nav">
-      <a class="brand" href="./Index.html">
+
+      <a class="brand" href="./index.html" aria-label="Go to Home">
         <img src="../images/logo.png" alt="SunSync logo" />
         <div class="name"><span>Feature Overview</span></div>
       </a>
 
-      <nav class="navlinks" id="navlinks">
-        <a href="./Index.html">Home</a>
-        <a href="./FeatureOverview.html">Features</a>
+      <nav class="navlinks" id="navlinks" aria-label="Primary">
+        <a href="./index.html">Home</a>
+        <a class="active" href="./FeatureOverview.html">Features</a>
         <a href="./AppOverview.html">App Overview</a>
         <a href="./UseCase.html">Use Cases</a>
         <a href="./TechSpec.html">Tech Spec</a>
@@ -29,8 +31,9 @@
       </nav>
 
       <div class="actions">
-        <a class="btn primary" href="./AppOverview.html">App Overview</a>
+        <a class="btn primary" href="./UseCase.html">Use Cases</a>
       </div>
+
     </div>
   </div>
 </header>

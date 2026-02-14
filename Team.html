@@ -7,19 +7,21 @@
   <link rel="stylesheet" href="../css/styles.css" />
   <script defer src="../js/main.js"></script>
 </head>
+
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
 <header>
   <div class="container">
     <div class="nav">
-      <a class="brand" href="./Index.html">
+
+      <a class="brand" href="./index.html" aria-label="Go to Home">
         <img src="../images/logo.png" alt="SunSync logo" />
         <div class="name"><span>Team</span></div>
       </a>
 
-      <nav class="navlinks" id="navlinks">
-        <a href="./Index.html">Home</a>
+      <nav class="navlinks" id="navlinks" aria-label="Primary">
+        <a href="./index.html">Home</a>
         <a href="./FeatureOverview.html">Features</a>
         <a href="./AppOverview.html">App Overview</a>
         <a href="./UseCase.html">Use Cases</a>
@@ -29,8 +31,9 @@
       </nav>
 
       <div class="actions">
-        <a class="btn primary" href="./Index.html">Back Home</a>
+        <a class="btn primary" href="./UseCase.html">Use Cases</a>
       </div>
+
     </div>
   </div>
 </header>
@@ -45,90 +48,87 @@
   </section>
 
   <section class="section">
-  <div class="container">
+    <div class="container">
+      <div class="teamGrid">
 
-    <div class="teamGrid">
-
-      <div class="teamCard">
-        <div class="teamTop">
-          <div class="avatar warm">L</div>
-          <div class="teamMeta">
-            <h3>Lakhan</h3>
-            <p class="primaryRole">Project Lead</p>
+        <div class="teamCard">
+          <div class="teamTop">
+            <div class="avatar warm">L</div>
+            <div class="teamMeta">
+              <h3>Lakhan</h3>
+              <p class="primaryRole">Project Lead</p>
+            </div>
+          </div>
+          <div class="chipRow">
+            <span class="chip warm">Project Lead</span>
+            <span class="chip">App Development Lead</span>
+            <span class="chip">Systems Development</span>
           </div>
         </div>
-        <div class="chipRow">
-          <span class="chip warm">Project Lead</span>
-          <span class="chip">App Development Lead</span>
-          <span class="chip">Systems Development</span>
-        </div>
-      </div>
 
-      <div class="teamCard">
-        <div class="teamTop">
-          <div class="avatar cool">Z</div>
-          <div class="teamMeta">
-            <h3>Zeeshan</h3>
-            <p class="primaryRole">UI/UX Designer</p>
+        <div class="teamCard">
+          <div class="teamTop">
+            <div class="avatar cool">Z</div>
+            <div class="teamMeta">
+              <h3>Zeeshan</h3>
+              <p class="primaryRole">UI/UX Designer</p>
+            </div>
+          </div>
+          <div class="chipRow">
+            <span class="chip cool">UI/UX Designer</span>
+            <span class="chip">Web Developer</span>
+            <span class="chip">Presentation Lead</span>
           </div>
         </div>
-        <div class="chipRow">
-          <span class="chip cool">UI/UX Designer</span>
-          <span class="chip">Web Developer</span>
-          <span class="chip">Presentation Lead</span>
-        </div>
-      </div>
 
-      <div class="teamCard">
-        <div class="teamTop">
-          <div class="avatar">Y</div>
-          <div class="teamMeta">
-            <h3>Yuvraj</h3>
-            <p class="primaryRole">Videography</p>
+        <div class="teamCard">
+          <div class="teamTop">
+            <div class="avatar">Y</div>
+            <div class="teamMeta">
+              <h3>Yuvraj</h3>
+              <p class="primaryRole">Videography</p>
+            </div>
+          </div>
+          <div class="chipRow">
+            <span class="chip">Video Editing</span>
+            <span class="chip">Scriptwriting</span>
+            <span class="chip warm">Videography</span>
+            <span class="chip">App UI Design</span>
           </div>
         </div>
-        <div class="chipRow">
-          <span class="chip">Video Editing</span>
-          <span class="chip">Scriptwriting</span>
-          <span class="chip warm">Videography</span>
-          <span class="chip">App UI Design</span>
-        </div>
-      </div>
 
-      <div class="teamCard">
-        <div class="teamTop">
-          <div class="avatar cool">L</div>
-          <div class="teamMeta">
-            <h3>Lee</h3>
-            <p class="primaryRole">Product UX &amp; Design Lead</p>
+        <div class="teamCard">
+          <div class="teamTop">
+            <div class="avatar cool">L</div>
+            <div class="teamMeta">
+              <h3>Lee</h3>
+              <p class="primaryRole">Product UX &amp; Design Lead</p>
+            </div>
+          </div>
+          <div class="chipRow">
+            <span class="chip">Web Developer</span>
+            <span class="chip cool">Product UX &amp; Design Lead</span>
           </div>
         </div>
-        <div class="chipRow">
-          <span class="chip">Web Developer</span>
-          <span class="chip cool">Product UX &amp; Design Lead</span>
-        </div>
-      </div>
 
-      <div class="teamCard">
-        <div class="teamTop">
-          <div class="avatar">V</div>
-          <div class="teamMeta">
-            <h3>Victor</h3>
-            <p class="primaryRole">Systems Backend</p>
+        <div class="teamCard">
+          <div class="teamTop">
+            <div class="avatar">V</div>
+            <div class="teamMeta">
+              <h3>Victor</h3>
+              <p class="primaryRole">Systems Backend</p>
+            </div>
+          </div>
+          <div class="chipRow">
+            <span class="chip">App Development Support</span>
+            <span class="chip">System Management</span>
+            <span class="chip cool">Systems Backend</span>
           </div>
         </div>
-        <div class="chipRow">
-          <span class="chip">App Development Support</span>
-          <span class="chip">System Management</span>
-          <span class="chip cool">Systems Backend</span>
-        </div>
-      </div>
 
+      </div>
     </div>
-
-  </div>
-</section>
-
+  </section>
 </main>
 
 <footer class="footer">
@@ -136,5 +136,6 @@
     <small>© SunSync — Team</small>
   </div>
 </footer>
+
 </body>
 </html>

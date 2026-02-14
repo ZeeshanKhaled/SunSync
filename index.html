@@ -14,17 +14,14 @@
 <header>
   <div class="container">
     <div class="nav">
-      <a class="brand" href="./Index.html">
-        <!-- Update filename if needed -->
+
+      <a class="brand" href="./index.html" aria-label="Go to Home">
         <img src="../images/logo.png" alt="SunSync logo" />
-        <div class="name">
-          <span>Adaptive Smart Lamp</span>
-        </div>
+        <div class="name"><span>Adaptive Smart Lamp</span></div>
       </a>
 
-     
-      <nav class="navlinks" id="navlinks">
-        <a href="./Index.html">Home</a>
+      <nav class="navlinks" id="navlinks" aria-label="Primary">
+        <a class="active" href="./index.html">Home</a>
         <a href="./FeatureOverview.html">Features</a>
         <a href="./AppOverview.html">App Overview</a>
         <a href="./UseCase.html">Use Cases</a>
@@ -34,15 +31,15 @@
       </nav>
 
       <div class="actions">
-        <a class="btn primary" href="./FeatureOverview.html">Explore</a>
+        <a class="btn primary" href="./UseCase.html">Use Cases</a>
       </div>
+
     </div>
   </div>
 </header>
 
 <main id="main">
 
-  <!-- HERO -->
   <section class="hero">
     <div class="container">
       <div class="heroGrid">
@@ -52,8 +49,8 @@
             <span class="dot"></span>
             Circadian lighting, built for modern routines
           </div>
-<img class="heroTitleImg" src="../images/Lamp.png"  />
 
+          <img class="heroTitleImg" src="../images/Lamp.png" alt="SunSync lamp concept" loading="eager" />
 
           <p class="lead">
             SunSync is a smart lamp concept that balances <strong>warm sunrise energy</strong> and
@@ -67,7 +64,7 @@
           </div>
         </div>
 
-        <aside class="heroCard">
+        <aside class="heroCard" aria-label="At a glance">
           <div class="heroCardInner">
             <div class="pill">At a glance</div>
 
@@ -100,7 +97,6 @@
     </div>
   </section>
 
-  <!-- PROBLEM / SOLUTION -->
   <section class="section">
     <div class="container">
       <h2>Why SunSync exists</h2>
@@ -129,7 +125,6 @@
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
   <section class="section">
     <div class="container">
       <h2>How it works</h2>
@@ -155,7 +150,7 @@
 
       <div class="card" style="margin-top:14px;">
         <div class="pill">4</div>
-        <h3>Adaptive learning (optional extension)</h3>
+        <h3>Adaptive learning</h3>
         <p>
           SunSync can learn patterns (e.g. repeated late nights) and suggest adjustments to support healthier habits —
           without taking full control away from the user.
@@ -164,7 +159,6 @@
     </div>
   </section>
 
-  <!-- DAY / NIGHT PANELS -->
   <section class="section">
     <div class="container">
       <h2>Designed around the day ↔ night cycle</h2>
@@ -204,15 +198,12 @@
     </div>
   </section>
 
-  <!-- CTA -->
   <section class="section">
     <div class="container">
       <div class="panel" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;">
         <div>
           <h2 style="margin:0 0 6px;">Explore the project</h2>
-          <p style="margin:0;color:var(--muted);">
-            View the features, use cases, and the technical specification.
-          </p>
+          <p style="margin:0;color:var(--muted);">View the features, use cases, and the technical specification.</p>
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;">
           <a class="btn primary" href="./FeatureOverview.html">Features</a>

@@ -7,30 +7,33 @@
   <link rel="stylesheet" href="../css/styles.css" />
   <script defer src="../js/main.js"></script>
 </head>
+
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
 <header>
   <div class="container">
     <div class="nav">
-      <a class="brand" href="./Index.html">
+
+      <a class="brand" href="./index.html" aria-label="Go to Home">
         <img src="../images/logo.png" alt="SunSync logo" />
         <div class="name"><span>Use Cases</span></div>
       </a>
 
-      <nav class="navlinks" id="navlinks">
-        <a href="./Index.html">Home</a>
+      <nav class="navlinks" id="navlinks" aria-label="Primary">
+        <a href="./index.html">Home</a>
         <a href="./FeatureOverview.html">Features</a>
         <a href="./AppOverview.html">App Overview</a>
-        <a href="./UseCase.html">Use Cases</a>
+        <a class="active" href="./UseCase.html">Use Cases</a>
         <a href="./TechSpec.html">Tech Spec</a>
         <a href="./OpenSource.html">Open Source</a>
         <a href="./Team.html">Team</a>
       </nav>
 
       <div class="actions">
-        <a class="btn secondary" href="./TechSpec.html">Tech Spec</a>
+        <a class="btn primary" href="./UseCase.html">Use Cases</a>
       </div>
+
     </div>
   </div>
 </header>
@@ -50,7 +53,7 @@
         <div class="card">
           <div class="pill">🌅 Morning</div>
           <h3>Sunrise wake-up</h3>
-          <p>Gradual light increases 20–30 minutes before alarm to reduce grogginess.</p>
+          <p>Gradual light increases 20–30 minutes before your alarm, helping reduce grogginess.</p>
         </div>
         <div class="card">
           <div class="pill">📚 Study</div>
@@ -62,7 +65,6 @@
           <h3>Wind-down routine</h3>
           <p>Warm dim mode in the last hour before sleep to promote relaxation.</p>
         </div>
-
         <div class="card">
           <div class="pill">🔔 Silent alerts</div>
           <h3>Notification glow</h3>

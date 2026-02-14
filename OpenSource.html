@@ -7,31 +7,33 @@
   <link rel="stylesheet" href="../css/styles.css" />
   <script defer src="../js/main.js"></script>
 </head>
+
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
 <header>
   <div class="container">
     <div class="nav">
-      <a class="brand" href="./Index.html">
+
+      <a class="brand" href="./index.html" aria-label="Go to Home">
         <img src="../images/logo.png" alt="SunSync logo" />
         <div class="name"><span>Open Source</span></div>
       </a>
 
-
-      <nav class="navlinks" id="navlinks">
-        <a href="./Index.html">Home</a>
+      <nav class="navlinks" id="navlinks" aria-label="Primary">
+        <a href="./index.html">Home</a>
         <a href="./FeatureOverview.html">Features</a>
         <a href="./AppOverview.html">App Overview</a>
         <a href="./UseCase.html">Use Cases</a>
         <a href="./TechSpec.html">Tech Spec</a>
-        <a href="./OpenSource.html">Open Source</a>
+        <a class="active" href="./OpenSource.html">Open Source</a>
         <a href="./Team.html">Team</a>
       </nav>
 
       <div class="actions">
-        <a class="btn secondary" href="./Team.html">Meet the Team</a>
+        <a class="btn primary" href="./UseCase.html">Use Cases</a>
       </div>
+
     </div>
   </div>
 </header>
@@ -39,9 +41,9 @@
 <main id="main">
   <section class="hero">
     <div class="container">
-      <div class="kicker"><span class="dot"></span> Transparency & collaboration</div>
+      <div class="kicker"><span class="dot"></span> Transparency &amp; collaboration</div>
       <h1>Open Source Approach</h1>
-      <p class="lead">How SunSync could share parts of its ecosystem for community trust and extensibility.</p>
+      <p class="lead">How SunSync could share parts of its ecosystem to support trust and extensibility.</p>
     </div>
   </section>
 
@@ -51,17 +53,17 @@
         <div class="card">
           <div class="pill">Docs</div>
           <h3>Public documentation</h3>
-          <p>Setup guides, API outlines, and design rationale.</p>
+          <p>Setup guides, API outlines, and clear design rationale for contributors.</p>
         </div>
         <div class="card">
           <div class="pill">Interfaces</div>
           <h3>Open integrations</h3>
-          <p>Clear endpoints for routines, schedules, and mode triggers.</p>
+          <p>Defined endpoints for routines, schedules, and mode triggers (future-ready).</p>
         </div>
         <div class="card">
           <div class="pill">Community</div>
           <h3>Extensions</h3>
-          <p>Plugins for calendars, productivity tools, or custom presets.</p>
+          <p>Plugins for calendars, productivity tools, and custom presets built by the community.</p>
         </div>
       </div>
     </div>
