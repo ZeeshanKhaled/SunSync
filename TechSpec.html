@@ -4,23 +4,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>SunSync | Technical Specification</title>
-  <link rel="stylesheet" href="../css/styles.css" />
-  <script defer src="../js/main.js"></script>
+  <link rel="stylesheet" href="./css/styles.css" />
+  <script defer src="./is/js/main.js"></script>
 </head>
-
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
 <header>
   <div class="container">
     <div class="nav">
-
-      <a class="brand" href="./index.html" aria-label="Go to Home">
-        <img src="../images/logo.png" alt="SunSync logo" />
+      <a class="brand" href="./index.html">
+        <img src="./images/Logo.png" alt="SunSync logo" />
         <div class="name"><span>Tech Spec</span></div>
       </a>
 
-      <nav class="navlinks" id="navlinks" aria-label="Primary">
+      <nav class="navlinks" id="navlinks">
         <a href="./index.html">Home</a>
         <a href="./FeatureOverview.html">Features</a>
         <a href="./AppOverview.html">App Overview</a>
@@ -31,9 +29,8 @@
       </nav>
 
       <div class="actions">
-        <a class="btn primary" href="./UseCase.html">Use Cases</a>
+        <a class="btn primary" href="./FeatureOverview.html">Explore</a>
       </div>
-
     </div>
   </div>
 </header>
@@ -70,7 +67,7 @@
           <div class="pill">Warm</div>
           <h3>Wake + Wind-down</h3>
           <ul class="list">
-            <li>Sunrise ramp: 0% → 100% brightness over a set duration</li>
+            <li>Sunrise ramp: 0% → 100% brightness over set duration</li>
             <li>Warm colour temperature for evening relaxation</li>
           </ul>
         </div>
@@ -89,7 +86,17 @@
 
 <footer class="footer">
   <div class="container">
-    <small>© SunSync — Technical Specification</small>
+    <div class="footerGrid">
+      <div>
+        <strong>SunSync</strong><br />
+        <small>Tech Spec — concept architecture and modes.</small>
+      </div>
+      <div class="footerLinks">
+        <a href="./index.html">Home</a>
+        <a href="./UseCase.html">Use Cases</a>
+        <a href="./OpenSource.html">Open Source</a>
+      </div>
+    </div>
   </div>
 </footer>
 </body>
