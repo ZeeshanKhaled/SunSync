@@ -528,3 +528,101 @@ h1{
 @media (max-width: 920px){
   .phoneRow{ grid-template-columns: 1fr; }
 }
+/* =========================
+   MOBILE OPTIMISATION
+   ========================= */
+
+@media (max-width: 768px){
+
+  /* Container tighter */
+  .container{
+    padding: 0 12px;
+  }
+
+  /* NAVBAR */
+  .nav{
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .navlinks{
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+
+  .navlinks a{
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  /* LOGO */
+  .brand img{
+    height: 48px;
+  }
+
+  /* HERO STACK */
+  .heroGrid{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .hero{
+    padding: 24px 0 10px;
+  }
+
+  /* HERO IMAGE */
+  .heroTitleImg{
+    max-width: 100%;
+  }
+
+  /* BUTTONS */
+  .heroBtns{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn{
+    width: 100%;
+  }
+
+  /* CARDS STACK */
+  .grid3{
+    grid-template-columns: 1fr;
+  }
+
+  /* PANELS STACK */
+  .split{
+    grid-template-columns: 1fr;
+  }
+
+  /* HERO CARD */
+  .heroCard{
+    padding: 14px;
+  }
+
+  .statRow{
+    grid-template-columns: 1fr;
+  }
+
+  /* FOOTER */
+  .footerGrid{
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .footerLinks{
+    justify-content: flex-start;
+  }
+
+}
+.navlinks::-webkit-scrollbar{
+  height: 4px;
+}
+.navlinks::-webkit-scrollbar-thumb{
+  background: rgba(255,255,255,0.2);
+  border-radius: 10px;
+}
