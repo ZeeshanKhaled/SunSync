@@ -1,13 +1,16 @@
 /* =========================
-   SunSync Website - styles.css (REWRITE v4)
-   Added:
-   - App Overview hero columns top-aligned via .page-app
-   Optimised:
-   - Reduced repeated values via variables
-   - Consolidated repeated grid/card styles
-   - Kept ALL your existing look/behaviour (no visual downgrade)
+   SunSync Website - styles.css (REWRITE v6)
+   Seamless LED flow (NO reverse, NO snap) on Feature page only
+   - Keeps your current layout/behaviour
+   - Keeps fixed glow overlay (band fix)
+   - Keeps .page-app hero top-aligned
+   - Keeps Team premium cards
+   - Keeps mobile nav scroll styling
    ========================= */
 
+/* =========================
+   Tokens
+   ========================= */
 :root{
   --bg: #0b1c2c;
   --bg-2: #071521;
@@ -43,7 +46,6 @@
    ========================= */
 *{ box-sizing: border-box; }
 html, body{ height: 100%; }
-
 html{ background: var(--bg-2); }
 
 body{
@@ -51,11 +53,12 @@ body{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
   color: var(--text);
   line-height: 1.5;
-
-  /* Base background only */
   background: linear-gradient(180deg, var(--bg), var(--bg-2));
   position: relative;
 }
+
+a{ color: inherit; text-decoration: none; }
+img{ display: block; max-width: 100%; }
 
 /* Fixed glow overlay (prevents visible colour band) */
 body::before{
@@ -68,9 +71,6 @@ body::before{
     radial-gradient(900px 520px at 18% 0%, rgba(255,158,44,0.18), transparent 55%),
     radial-gradient(900px 520px at 82% 0%, rgba(56,189,248,0.16), transparent 55%);
 }
-
-a{ color: inherit; text-decoration: none; }
-img{ display: block; max-width: 100%; }
 
 /* Skip link */
 .skip{
@@ -85,7 +85,7 @@ img{ display: block; max-width: 100%; }
 .skip:focus{ left: 12px; z-index: 9999; }
 
 /* =========================
-   Container (tighter margins)
+   Container
    ========================= */
 .container{
   width: min(var(--max), 100%);
@@ -129,7 +129,6 @@ header{
   filter: drop-shadow(0 0 26px rgba(255,158,44,0.26));
 }
 
-/* Keep these if some pages still have the text block */
 .brand .name{
   display: flex;
   flex-direction: column;
@@ -275,7 +274,7 @@ h1{
   margin-top: 18px;
 }
 
-/* Generic "surface" look shared by cards/panels */
+/* Shared surface look */
 .card,
 .panel,
 .heroCard,
@@ -450,7 +449,7 @@ h1{
 .footerLinks a:hover{ background: var(--glass-06); }
 
 /* =========================
-   Responsive (existing)
+   Responsive
    ========================= */
 @media (max-width: 920px){
   .heroGrid{ grid-template-columns: 1fr; }
@@ -544,7 +543,7 @@ h1{
 }
 
 /* =========================
-   MOBILE OPTIMISATION
+   Mobile optimisation
    ========================= */
 @media (max-width: 768px){
 
@@ -613,7 +612,7 @@ h1{
 }
 
 /* =========================
-   TEAM PAGE (premium cards)
+   Team page (premium cards)
    ========================= */
 .teamGrid{
   display: grid;
@@ -699,4 +698,66 @@ h1{
 
 @media (max-width: 920px){
   .teamGrid{ grid-template-columns: 1fr; }
+}
+
+/* =========================
+   LED EDGE STRIP — Feature page only (SEAMLESS LOOP, NO REVERSE, NO SNAP)
+   - Add <body class="page-features"> on FeatureOverview page
+   - No bottom edge
+   - Uses repeating gradient so the start/end match seamlessly
+   ========================= */
+.page-features{
+  --ledGlow: 1;
+  --ledOpacity: 0.95;
+  --ledThickness: 3px;
+  --ledBottomCut: 12px; /* removes bottom edge strip */
+}
+
+.page-features::after{
+  content:"";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+
+  /* Repeating gradient ensures seamless wrap when animating */
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255,158,44,0.92) 0%,
+    rgba(255,209,102,0.92) 12.5%,
+    rgba(56,189,248,0.92) 25%,
+    rgba(14,165,233,0.92) 37.5%,
+    rgba(255,158,44,0.92) 50%,
+    rgba(255,209,102,0.92) 62.5%,
+    rgba(56,189,248,0.92) 75%,
+    rgba(14,165,233,0.92) 87.5%,
+    rgba(255,158,44,0.92) 100%
+  );
+
+  /* Make the pattern longer so movement feels smooth */
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  animation: ledSeamless 8s linear infinite;
+
+  /* Only show border region */
+  padding: var(--ledThickness);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  /* Remove bottom edge strip */
+  clip-path: inset(0 0 var(--ledBottomCut) 0);
+
+  filter:
+    drop-shadow(0 0 10px rgba(255,158,44, calc(0.45 * var(--ledGlow))))
+    drop-shadow(0 0 10px rgba(56,189,248, calc(0.40 * var(--ledGlow))));
+
+  opacity: var(--ledOpacity);
+}
+
+@keyframes ledSeamless{
+  0%   { background-position: 0% 50%; }
+  100% { background-position: -100% 50%; }
 }
