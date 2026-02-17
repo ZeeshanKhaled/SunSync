@@ -53,3 +53,75 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", updateLed, { passive: true });
   window.addEventListener("resize", updateLed);
 })();
+// =========================
+// Making Of: scroll reveal + progress + subtle parallax
+// =========================
+document.addEventListener("DOMContentLoaded", () => {
+  const pageIsMaking = document.body.classList.contains("page-making");
+  if (!pageIsMaking) return;
+
+  // 1) Scroll reveal
+  const revealEls = Array.from(document.querySelectorAll(".reveal"));
+  const io = new IntersectionObserver(
+    (entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          e.target.classList.add("in");
+          io.unobserve(e.target);
+        }
+      }
+    },
+    { threshold: 0.18 }
+  );
+  revealEls.forEach(el => io.observe(el));
+
+  // 2) Progress bar across the whole timeline section
+  const progressFill = document.getElementById("makingProgressFill");
+  const timeline = document.getElementById("timeline");
+  const clamp01 = (n) => Math.max(0, Math.min(1, n));
+
+  function updateProgress() {
+    if (!progressFill || !timeline) return;
+
+    const rect = timeline.getBoundingClientRect();
+    const viewport = window.innerHeight;
+
+    // Start when top enters viewport, end when bottom leaves
+    const start = viewport * 0.2;
+    const end = viewport * 0.85;
+
+    const total = rect.height + (end - start);
+    const progressed = (start - rect.top);
+
+    const p = clamp01(progressed / total);
+    progressFill.style.width = `${Math.round(p * 100)}%`;
+  }
+
+  // 3) Subtle parallax on media cards
+  const parallaxItems = Array.from(document.querySelectorAll("[data-parallax] .makingMedia"));
+
+  function updateParallax() {
+    const viewport = window.innerHeight;
+    for (const media of parallaxItems) {
+      const r = media.getBoundingClientRect();
+      // Centered ratio (-1 to 1)
+      const t = ((r.top + r.height * 0.5) - viewport * 0.5) / (viewport * 0.5);
+      // max 10px shift
+      const px = Math.max(-10, Math.min(10, -t * 10));
+      media.style.setProperty("--parallax", `${px.toFixed(2)}px`);
+    }
+  }
+
+  // Combined loop (lightweight)
+  function onScroll() {
+    updateProgress();
+    updateParallax();
+  }
+
+  // Initial
+  onScroll();
+
+  // Events
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+});
