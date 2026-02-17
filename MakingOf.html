@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SunSync | Making Of</title>
+
+  <!-- favicon (adjust if your path differs) -->
+  <link rel="icon" href="./images/123.png" />
+
+  <link rel="stylesheet" href="./css/styles.css" />
+  <script defer src="./js/main.js"></script>
+</head>
+
+<body class="page-making">
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <div class="container">
+    <div class="nav">
+
+      <a class="brand" href="./index.html">
+        <img src="./images/Logo.png" alt="SunSync logo" />
+        <div class="name"><span>Making Of</span></div>
+      </a>
+
+      <nav class="navlinks" id="navlinks">
+        <a href="./index.html">Home</a>
+        <a href="./FeatureOverview.html">Features</a>
+        <a href="./AppOverview.html">App Overview</a>
+        <a href="./UseCase.html">Use Cases</a>
+        <a href="./TechSpec.html">Tech Spec</a>
+        <a href="./OpenSource.html">Open Source</a>
+        <a class="active" href="./MakingOf.html">Making Of</a>
+        <a href="./Team.html">Team</a>
+      </nav>
+
+      <div class="actions">
+        <a class="btn primary" href="./Team.html">Meet The Team</a>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="heroGrid makingHero">
+
+        <div class="reveal">
+          <div class="kicker"><span class="dot"></span> Behind the product</div>
+          <h1>The Making of SunSync</h1>
+          <p class="lead">
+            A clean timeline of how the project evolved — from concept → design → build → polish.
+          </p>
+
+          <div class="heroBtns">
+            <a class="btn primary" href="/TechSpec.html">View Tech Spec</a>
+            <a class="btn secondary" href="./FeatureOverview.html">Features</a>
+          </div>
+        </div>
+
+        <!-- Apple-style “summary card” -->
+        <aside class="heroCard reveal">
+          <div class="heroCardInner">
+            <div class="pill">At a glance</div>
+
+            <div class="statRow">
+              <div class="stat">
+                <div class="big">Concept</div>
+                <div class="small">Problem → solution framing</div>
+              </div>
+              <div class="stat">
+                <div class="big">Design</div>
+                <div class="small">Figma → UI structure</div>
+              </div>
+              <div class="stat">
+                <div class="big">Build</div>
+                <div class="small">HTML/CSS/JS prototype</div>
+              </div>
+              <div class="stat">
+                <div class="big">Iterate</div>
+                <div class="small">Polish + fixes</div>
+              </div>
+            </div>
+
+            <p class="lead" style="margin-top:14px;">
+
+            </p>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section id="timeline" class="section">
+    <div class="container">
+
+
+      <div class="makingTimeline">
+
+        <!-- 01 -->
+        <article class="makingItem reveal" data-parallax>
+          <div class="makingDot" aria-hidden="true"></div>
+
+          <div class="makingCard">
+            <div class="pill">Stage 01</div>
+            <h3>Problem → Concept</h3>
+            <p>
+              The project started by identifying a real issue: irregular schedules cause poor sleep and weak focus.
+              SunSync aims to match light to the circadian day — warm to wake/wind-down, cool to focus.
+            </p>
+
+            <div class="makingMeta">
+              <span class="chip warm">Circadian rhythm</span>
+              <span class="chip">Target users</span>
+              <span class="chip cool">Value proposition</span>
+            </div>
+          </div>
+
+          <figure class="makingMedia">
+            <!-- Replace with your real image later -->
+            <img src="./images/idea.png" alt="Early concept notes / problem framing screenshot" loading="lazy" />
+            <figcaption>Replace with early notes / moodboard / brief.</figcaption>
+          </figure>
+        </article>
+
+        <!-- 02 -->
+        <article class="makingItem reveal" data-parallax>
+          <div class="makingDot" aria-hidden="true"></div>
+
+          <div class="makingCard">
+            <div class="pill">Stage 02</div>
+            <h3>Planning</h3>
+            <p>
+              With a clear concept, the next step was planning the design and build process in Figma: user flows, wireframes
+              and UI elements to ensure a consistent, polished prototype that effectively communicates the concept.
+            </p>
+
+            <div class="makingMeta">
+              <span class="chip cool">Figma</span>
+              <span class="chip">User flow</span>
+              <span class="chip">Consistency</span>
+            </div>
+          </div>
+
+          <figure class="makingMedia">
+            <img src="./images/design.png" alt="Figma wireframes / UI planning screenshot" loading="lazy" />
+            <figcaption>Replace with Figma screens / wireframes.</figcaption>
+          </figure>
+        </article>
+
+        <!-- 03 -->
+        <article class="makingItem reveal" data-parallax>
+          <div class="makingDot" aria-hidden="true"></div>
+
+          <div class="makingCard">
+            <div class="pill">Stage 03</div>
+            <h3>Prototype Build</h3>
+            <p>
+             Once everyone was aligned on the design, the build phase focused on translating Figma screens into a functional HTML/CSS/JS prototype.
+                The goal was to create a realistic experience that effectively demonstrates the concept and design.
+                Sticking to the planned structure and styles ensured a polished, professional result.
+            </p>
+
+            <div class="makingMeta">
+              <span class="chip">HTML</span>
+              <span class="chip cool">CSS</span>
+              <span class="chip warm">Polish</span>
+            </div>
+          </div>
+
+          <figure class="makingMedia">
+            <img src="./images/dev.png" alt="Development screenshot of code or page builds" loading="lazy" />
+            <figcaption>Replace with VS Code screenshot / commit view.</figcaption>
+          </figure>
+        </article>
+
+        <!-- 04 -->
+        <article class="makingItem reveal" data-parallax>
+          <div class="makingDot" aria-hidden="true"></div>
+
+          <div class="makingCard">
+            <div class="pill">Stage 04</div>
+            <h3>Iteration & Fixes</h3>
+            <p>
+              Final iteration focused on real-world issues like responsiveness, accessibility, and minor bugs. This stage is crucial for polishing the prototype and ensuring it’s a professional, user-friendly experience that effectively communicates the concept.
+             Iteration is a key part of the design process, allowing for continuous improvement and refinement based
+            </p>
+
+            <div class="makingMeta">
+              <span class="chip">GitHub Pages</span>
+              <span class="chip cool">Responsive</span>
+              <span class="chip">Bug fixes</span>
+            </div>
+          </div>
+
+          <figure class="makingMedia">
+            <img src="./images/final.png" alt="Final screenshot of the project" loading="lazy" />
+            <figcaption>Replace with final site screenshots.</figcaption>
+          </figure>
+        </article>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="panel makingCTA reveal" style="margin-top:18px;">
+        <div>
+          <h2 style="margin:0 0 6px;">Want the full technical breakdown?</h2>
+          <p style="margin:0;color:var(--muted);">See specs + features that map to the implementation.</p>
+        </div>
+        <div class="makingCTAButtons">
+          <a class="btn primary" href="./TechSpec.html">Tech Spec</a>
+          <a class="btn secondary" href="./FeatureOverview.html">Features</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footerGrid">
+      <div>
+        <strong>SunSync</strong><br />
+        <small>Making Of — concept, design, build, and iteration.</small>
+      </div>
+      <div class="footerLinks">
+        <a href="./index.html">Home</a>
+        <a href="./FeatureOverview.html">Features</a>
+        <a href="./TechSpec.html">Tech Spec</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
