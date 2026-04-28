@@ -1,5 +1,7 @@
 # SunSync
 
+🌐 **Live Website:** https://zeeshankhaled.github.io/SunSync/
+
 SunSync is an adaptive smart lamp concept designed to support healthier daily routines through circadian-inspired lighting. The website presents the product idea, key features, app concept, technical specification, use cases, open-source approach, making-of process, and team roles.
 
 ## Project Overview
@@ -80,7 +82,11 @@ For best results, use a local server such as the VS Code Live Server extension.
 
 ## Deployment
 
-This project can be deployed using GitHub Pages:
+The live version of this project is hosted using GitHub Pages:
+
+https://zeeshankhaled.github.io/SunSync/
+
+To deploy or update it through GitHub Pages:
 
 1. Push the project folder to a GitHub repository.
 2. Go to the repository settings.
